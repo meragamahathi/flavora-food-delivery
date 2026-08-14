@@ -1,0 +1,1306 @@
+@charset "UTF-8";
+
+/* ===============================
+   GOOGLE FONT & RESET
+=================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f9fa;
+    color:#333;
+    overflow-x:hidden;
+}
+
+/* ===============================
+   COLORS
+=================================*/
+
+:root{
+
+    --primary:#ff6b35;
+
+    --secondary:#ff6b35;
+
+    --yellow:#ffb703;
+
+    --white:#ffffff;
+
+    --black:#111;
+
+    --gray:#777;
+
+    --light:#f5f5f5;
+
+}
+
+
+/* ===============================
+      NAVBAR
+=================================*/
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:85px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 70px;
+
+    z-index:1000;
+
+    background:rgba(0,0,0,.25);
+
+    backdrop-filter:blur(15px);
+
+    transition:.4s;
+
+}
+
+.navbar.scrolled{
+
+    background:rgba(15,15,15,.92);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+}
+
+.logo{
+
+    color:white;
+
+    font-size:32px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    cursor:pointer;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:35px;
+
+    list-style:none;
+
+}
+
+.nav-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:17px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:var(--yellow);
+
+}
+
+.menu-icon{
+
+    display:none;
+
+    color:white;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+}
+
+
+
+/* ===============================
+      HERO
+=================================*/
+
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.bg-video{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transform:translate(-50%,-50%);
+
+    z-index:-2;
+
+    transition:opacity .8s ease;
+
+}
+
+.overlay{
+
+    /* Light overlay — just enough to keep the hero text readable
+       without dulling or "blurring" the original video underneath */
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.15);
+
+    z-index:-1;
+
+}
+
+
+
+/* ===============================
+      HERO CONTENT
+=================================*/
+
+.hero-content{
+
+    text-align:center;
+
+    color:white;
+
+    width:90%;
+
+    max-width:900px;
+
+    animation:fadeUp 1.5s ease;
+
+}
+
+.tagline{
+
+    display:inline-block;
+
+    background:rgba(255,255,255,.18);
+
+    padding:12px 28px;
+
+    border-radius:40px;
+
+    font-size:15px;
+
+    backdrop-filter:blur(8px);
+
+    margin-bottom:30px;
+
+}
+
+.hero-content h1{
+
+    font-size:60px;
+
+    font-weight:700;
+
+    line-height:1.15;
+
+    margin-bottom:25px;
+
+    text-shadow:0 4px 18px rgba(0,0,0,.55);
+
+}
+
+.hero-content p{
+
+    font-size:20px;
+
+    color:#f2f2f2;
+
+    line-height:1.8;
+
+    margin-bottom:45px;
+
+    text-shadow:0 2px 10px rgba(0,0,0,.5);
+
+}
+
+
+
+/* ===============================
+      SEARCH BOX
+=================================*/
+
+.search-box{
+
+    width:850px;
+
+    max-width:95%;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background:white;
+
+    border-radius:60px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+.search-box i{
+
+    color:var(--primary);
+
+    padding-left:25px;
+
+    font-size:22px;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    padding:22px;
+
+    font-size:17px;
+
+}
+
+.search-box button{
+
+    background:linear-gradient(135deg,
+
+    var(--primary),
+
+    var(--secondary));
+
+    color:white;
+
+    border:none;
+
+    padding:22px 35px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.4s;
+
+}
+
+.search-box button:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* ===============================
+      SECTION TITLE
+=================================*/
+
+section{
+
+    padding:90px 8%;
+
+}
+
+section h2{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:12px;
+
+}
+
+.section-subtitle{
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:18px;
+
+    margin-bottom:60px;
+
+}
+
+
+
+/* ===============================
+      ANIMATION
+=================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/*====================================
+      POPULAR CATEGORIES
+=====================================*/
+
+.categories{
+    background:#fff;
+}
+
+.category-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+
+    gap:35px;
+
+    margin-top:40px;
+
+}
+
+.category-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    padding:25px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    overflow:hidden;
+
+}
+
+.category-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 18px 45px rgba(0,0,0,.18);
+
+}
+
+.category-card img{
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+.category-card:hover img{
+
+    transform:scale(1.1);
+
+}
+
+.category-card h3{
+
+    margin-top:18px;
+
+    font-size:20px;
+
+    color:#333;
+
+    font-weight:600;
+
+}
+
+
+
+/*====================================
+      RESTAURANTS
+=====================================*/
+
+.restaurants{
+
+    background:#f7f7f7;
+
+}
+
+.restaurant-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+.restaurant-card{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+    cursor:pointer;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.restaurant-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 55px rgba(0,0,0,.18);
+
+}
+
+.restaurant-card img{
+
+    width:100%;
+
+    height:240px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.restaurant-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.restaurant-info{
+
+    padding:22px;
+
+}
+
+.restaurant-info h3{
+
+    font-size:26px;
+
+    margin-bottom:10px;
+
+}
+
+.restaurant-info p{
+
+    color:#777;
+
+    margin-bottom:18px;
+
+}
+
+.restaurant-info span{
+
+    display:inline-block;
+
+    background:#16a34a;
+
+    color:#fff;
+
+    padding:8px 18px;
+
+    border-radius:25px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+
+
+/*====================================
+      WHY CHOOSE US
+=====================================*/
+
+.features{
+
+    background:#fff;
+
+}
+
+.feature-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:35px;
+
+}
+
+.feature-card{
+
+    background:#fff;
+
+    text-align:center;
+
+    padding:40px 30px;
+
+    border-radius:20px;
+
+    transition:.4s;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+
+}
+
+.feature-card i{
+
+    width:90px;
+
+    height:90px;
+
+    line-height:90px;
+
+    font-size:38px;
+
+    border-radius:50%;
+
+    color:#fff;
+
+    background:linear-gradient(135deg,#ff6b35,#ff6b35);
+
+    margin-bottom:25px;
+
+}
+
+.feature-card h3{
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+}
+
+.feature-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+
+
+/*====================================
+      SCROLL ANIMATION
+=====================================*/
+
+.category-card,
+.restaurant-card,
+.feature-card{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+.category-card:nth-child(1){animation-delay:.1s;}
+.category-card:nth-child(2){animation-delay:.2s;}
+.category-card:nth-child(3){animation-delay:.3s;}
+.category-card:nth-child(4){animation-delay:.4s;}
+.category-card:nth-child(5){animation-delay:.5s;}
+.category-card:nth-child(6){animation-delay:.6s;}
+
+.restaurant-card:nth-child(1){animation-delay:.2s;}
+.restaurant-card:nth-child(2){animation-delay:.3s;}
+.restaurant-card:nth-child(3){animation-delay:.4s;}
+.restaurant-card:nth-child(4){animation-delay:.5s;}
+.restaurant-card:nth-child(5){animation-delay:.6s;}
+.restaurant-card:nth-child(6){animation-delay:.7s;}
+
+.feature-card:nth-child(1){animation-delay:.2s;}
+.feature-card:nth-child(2){animation-delay:.3s;}
+.feature-card:nth-child(3){animation-delay:.4s;}
+.feature-card:nth-child(4){animation-delay:.5s;}
+
+/*====================================
+        CUSTOMER REVIEWS
+=====================================*/
+
+.reviews{
+
+    background:#f8f9fa;
+
+}
+
+.review-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+
+}
+
+.review-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    padding:35px 30px;
+
+    transition:.4s;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.review-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+
+}
+
+.review-card img{
+
+    width:100px;
+
+    height:100px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:5px solid #ff6b35;
+
+    margin-bottom:20px;
+
+}
+
+.review-card h3{
+
+    margin-bottom:10px;
+
+}
+
+.review-card span{
+
+    color:#ffb703;
+
+    font-size:20px;
+
+}
+
+.review-card p{
+
+    margin-top:18px;
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+
+
+/*====================================
+        DOWNLOAD APP
+=====================================*/
+
+.download-app{
+
+    background:linear-gradient(135deg,#ff6b35,#ff6b35);
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:50px;
+
+    flex-wrap:wrap;
+
+}
+
+.download-left{
+
+    flex:1;
+
+}
+
+.download-left h2{
+
+    text-align:left;
+
+    font-size:48px;
+
+    margin-bottom:20px;
+
+}
+
+.download-left p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+.download-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.download-buttons a{
+
+    text-decoration:none;
+
+    color:white;
+
+    background:rgba(255,255,255,.15);
+
+    padding:16px 28px;
+
+    border-radius:50px;
+
+    transition:.4s;
+
+    backdrop-filter:blur(8px);
+
+}
+
+.download-buttons a:hover{
+
+    background:white;
+
+    color:#ff6b35;
+
+}
+
+.download-buttons i{
+
+    margin-right:10px;
+
+}
+
+.download-right{
+
+    flex:1;
+
+    text-align:center;
+
+}
+
+.download-right img{
+
+    width:330px;
+
+    max-width:100%;
+
+}
+
+
+
+/*====================================
+            FOOTER
+=====================================*/
+
+footer{
+
+    background:#111;
+
+    color:white;
+
+    padding:70px 8% 30px;
+
+}
+
+.footer-container{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1fr;
+
+    gap:40px;
+
+}
+
+.footer-about h2{
+
+    text-align:left;
+
+    margin-bottom:20px;
+
+}
+
+.footer-about p{
+
+    color:#bbb;
+
+    line-height:1.8;
+
+}
+
+.footer-links h3,
+
+.footer-social h3{
+
+    margin-bottom:20px;
+
+}
+
+.footer-links a{
+
+    display:block;
+
+    color:#bbb;
+
+    text-decoration:none;
+
+    margin-bottom:12px;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:#ffb703;
+
+    padding-left:6px;
+
+}
+
+.social-icons{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.social-icons a{
+
+    width:45px;
+
+    height:45px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:#222;
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.4s;
+
+}
+
+.social-icons a:hover{
+
+    background:#ff6b35;
+
+    transform:translateY(-5px);
+
+}
+
+footer hr{
+
+    margin:40px 0 20px;
+
+    border:none;
+
+    border-top:1px solid #333;
+
+}
+
+.copyright{
+
+    text-align:center;
+
+    color:#999;
+
+}
+
+
+
+/*====================================
+      MOBILE MENU
+=====================================*/
+
+@media(max-width:900px){
+
+.navbar{
+
+padding:0 25px;
+
+}
+
+.menu-icon{
+
+display:block;
+
+}
+
+.nav-links{
+
+position:absolute;
+
+top:85px;
+
+left:0;
+
+width:100%;
+
+background:#111;
+
+display:none;
+
+flex-direction:column;
+
+text-align:center;
+
+padding:25px;
+
+gap:25px;
+
+}
+
+.nav-links.show{
+
+display:flex;
+
+}
+
+.hero-content h1{
+
+font-size:44px;
+
+}
+
+.hero-content p{
+
+font-size:17px;
+
+}
+
+.search-box{
+
+flex-direction:column;
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+.search-box input{
+
+width:100%;
+
+}
+
+.search-box button{
+
+width:100%;
+
+}
+
+.download-app{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.download-left h2{
+
+text-align:center;
+
+}
+
+.footer-container{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.footer-about h2{
+
+text-align:center;
+
+}
+
+.social-icons{
+
+justify-content:center;
+
+}
+
+}
+
+
+
+/*====================================
+      MOBILE
+=====================================*/
+
+@media(max-width:600px){
+
+.hero{
+
+height:90vh;
+
+}
+
+.hero-content h1{
+
+font-size:32px;
+
+}
+
+.hero-content p{
+
+font-size:15px;
+
+}
+
+.tagline{
+
+font-size:13px;
+
+padding:10px 20px;
+
+}
+
+.search-box{
+
+width:100%;
+
+}
+
+section{
+
+padding:70px 6%;
+
+}
+
+section h2{
+
+font-size:32px;
+
+}
+
+.restaurant-card img{
+
+height:200px;
+
+}
+
+.download-left h2{
+
+font-size:36px;
+
+}
+
+.download-right img{
+
+width:240px;
+
+}
+
+}
+
+
+
+/*====================================
+      SCROLLBAR
+=====================================*/
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#eee;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#ff6b35;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#ff6b35;
+
+}
+
+
+
+/*====================================
+      BUTTON RIPPLE EFFECT
+=====================================*/
+
+.explore-btn{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.explore-btn::before{
+
+content:"";
+
+position:absolute;
+
+width:0;
+
+height:0;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.3);
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%);
+
+transition:.6s;
+
+}
+
+.explore-btn:hover::before{
+
+width:320px;
+
+height:320px;
+
+}

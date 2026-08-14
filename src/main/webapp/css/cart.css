@@ -1,0 +1,620 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#fff;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#fff;
+    border-bottom:1px solid #ececec;
+}
+
+.navbar h2{
+    color:#FC8019;
+    font-size:34px;
+}
+
+.navbar ul{
+    display:flex;
+    list-style:none;
+    gap:40px;
+}
+
+.navbar a{
+    text-decoration:none;
+    color:#222;
+    font-size:18px;
+    font-weight:500;
+}
+
+.navbar a:hover{
+    color:#FC8019;
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+    width:88%;
+    margin:45px auto;
+}
+
+.container h1{
+    font-size:42px;
+    margin-bottom:35px;
+}
+
+/* ================= CART CARD ================= */
+
+.cart-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#fff;
+
+    border:1px solid #ececec;
+
+    border-radius:18px;
+
+    padding:24px;
+
+    margin-bottom:28px;
+
+    box-shadow:0 4px 18px rgba(0,0,0,.08);
+}
+
+.left img{
+
+    width:150px;
+
+    height:150px;
+
+    border-radius:14px;
+
+    object-fit:cover;
+}
+
+.middle{
+
+    flex:1;
+
+    padding-left:35px;
+}
+
+.middle h2{
+
+    font-size:38px;
+
+    margin-bottom:16px;
+
+    color:#222;
+}
+
+.middle p{
+
+    color:#FC8019;
+
+    font-size:30px;
+
+    font-weight:600;
+}
+
+/* ================= RIGHT ================= */
+
+.right{
+
+    text-align:center;
+
+    width:190px;
+}
+
+.quantity{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-bottom:20px;
+}
+
+.quantity button{
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#FC8019;
+
+    color:#fff;
+
+    font-size:26px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.quantity button:hover{
+
+    background:#e66f00;
+}
+
+.quantity span{
+
+    font-size:30px;
+
+    font-weight:700;
+}
+
+.right h3{
+
+    font-size:34px;
+
+    margin-bottom:18px;
+}
+
+.remove{
+
+    width:125px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#FC8019;
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.remove:hover{
+
+    background:#e66f00;
+}
+
+/* ================= FOOTER ================= */
+
+.cart-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+
+    margin-top:45px;
+}
+
+/* Left Button */
+
+.add-more-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:300px;
+
+    height:58px;
+
+    background:#FC8019;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+    box-shadow:0 5px 15px rgba(252,128,25,.35);
+
+}
+
+.add-more-btn:hover{
+
+    background:#e66f00;
+
+    transform:translateY(-2px);
+
+}
+
+.add-more-btn:hover{
+
+    background:#FC8019;
+
+    color:#fff;
+}
+
+/* Right */
+
+.checkout{
+
+    text-align:right;
+}
+
+.checkout h2{
+
+    font-size:42px;
+
+    margin-bottom:22px;
+}
+
+.checkout-btn{
+
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+
+    width:330px;
+    height:58px;
+
+    background:#FC8019;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border-radius:10px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.checkout-btn:hover{
+
+    background:#e66f00;
+}
+
+/* ================= EMPTY ================= */
+
+.empty{
+
+    text-align:center;
+
+    margin-top:120px;
+}
+
+.empty h2{
+
+    margin-bottom:25px;
+}
+
+.empty a{
+
+    display:inline-block;
+
+    padding:18px 35px;
+
+    background:#FC8019;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border-radius:10px;
+}
+
+.profile-circle{
+    width:32px;
+    height:32px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#ff6b35;
+    color:white !important;
+
+    border-radius:50%;
+
+    font-size:14px;
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:0.3s;
+
+    box-shadow:0 3px 10px rgba(255,107,53,0.20);
+}
+
+.profile-circle:hover{
+    background:#e85b2b;
+    transform:scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

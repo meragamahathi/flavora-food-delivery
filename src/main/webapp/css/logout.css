@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-image: url("../images/food-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+}
+
+.logout-box {
+    background: #ffffff;
+    width: 100%;
+    max-width: 420px;
+    padding: 48px 36px 40px;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+    text-align: center;
+    animation: rise 0.5s ease;
+}
+
+@keyframes rise {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.check-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.check-icon svg {
+    animation: pop 0.5s ease 0.15s both;
+}
+
+@keyframes pop {
+    from {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header h1 {
+    color: #ff5a00;
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+}
+
+.logout-message {
+    color: #5a5a5a;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 14px 0 28px;
+}
+
+.logout-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff8a1e, #ff5a00);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.2px;
+    box-shadow: 0 8px 20px rgba(255, 90, 0, 0.35);
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+}
+
+.logout-btn:hover {
+    background: linear-gradient(135deg, #ff7a00, #e64d00);
+    box-shadow: 0 10px 24px rgba(255, 90, 0, 0.45);
+    transform: translateY(-1px);
+}
+
+.logout-btn:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 4px 12px rgba(255, 90, 0, 0.3);
+}
+
+@media (max-width: 480px) {
+    .logout-box {
+        padding: 40px 26px 32px;
+    }
+    body {
+        background-attachment: scroll;
+    }
+}

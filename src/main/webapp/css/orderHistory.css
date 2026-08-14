@@ -1,0 +1,257 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f5f5;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:#fff;
+box-shadow:0 2px 12px rgba(0,0,0,.08);
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#fc8019;
+}
+
+.navbar ul{
+display:flex;
+gap:35px;
+list-style:none;
+}
+
+.navbar ul li a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+transition:.3s;
+}
+
+.navbar ul li a:hover{
+color:#fc8019;
+}
+
+.container{
+width:85%;
+margin:40px auto;
+}
+
+.container h1{
+margin-bottom:30px;
+font-size:34px;
+color:#333;
+}
+
+.order-card{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:#fff;
+
+padding:25px;
+
+margin-bottom:25px;
+
+border-radius:18px;
+
+box-shadow:0 6px 18px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.order-card:hover{
+
+transform:translateY(-4px);
+
+}
+
+.left img{
+
+width:100px;
+
+height:100px;
+
+border-radius:15px;
+
+object-fit:cover;
+
+}
+
+.middle{
+
+flex:1;
+
+padding-left:25px;
+
+}
+
+.middle h2{
+
+margin-bottom:15px;
+
+font-size:24px;
+
+}
+
+.middle p{
+
+margin:8px 0;
+
+color:#555;
+
+font-size:16px;
+
+}
+
+.right{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:18px;
+
+}
+
+.status{
+
+padding:8px 20px;
+
+border-radius:25px;
+
+font-size:14px;
+
+font-weight:600;
+
+color:#fff;
+
+}
+
+.delivered{
+
+background:#28a745;
+
+}
+
+.pending{
+
+background:#fc8019;
+
+}
+
+.cancelled{
+
+background:#dc3545;
+
+}
+
+.order-btn{
+
+text-decoration:none;
+
+padding:12px 22px;
+
+background:#fc8019;
+
+color:#fff;
+
+border-radius:10px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.order-btn:hover{
+
+background:#e66d00;
+
+}
+
+.empty{
+
+text-align:center;
+
+margin-top:100px;
+
+}
+
+.empty h2{
+
+font-size:36px;
+
+margin-bottom:20px;
+
+}
+
+.empty p{
+
+font-size:18px;
+
+margin-bottom:25px;
+
+color:#666;
+
+}
+
+.empty a{
+
+display:inline-block;
+
+padding:15px 35px;
+
+background:#fc8019;
+
+color:#fff;
+
+text-decoration:none;
+
+border-radius:10px;
+
+font-weight:600;
+
+}
+
+.profile-circle{
+    width:32px;
+    height:32px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#ff6b35;
+    color:white !important;
+
+    border-radius:50%;
+
+    font-size:14px;
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:0.3s;
+
+    box-shadow:0 3px 10px rgba(255,107,53,0.20);
+}
+
+.profile-circle:hover{
+    background:#e85b2b;
+    transform:scale(1.05);
+}

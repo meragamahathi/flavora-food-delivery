@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#eef2f7;
+}
+
+/* Container */
+
+.container{
+
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+}
+
+/* Profile Card */
+
+.profile-card{
+
+    width:700px;
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
+
+    animation:fadeIn .6s ease;
+}
+
+/* Header */
+
+.profile-header{
+
+    background:linear-gradient(135deg,#ff8c42,#ff6b00);
+
+    color:white;
+
+    padding:35px;
+
+    text-align:center;
+}
+
+.avatar{
+
+    width:120px;
+    height:120px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:#ff6b00;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:60px;
+
+    margin-bottom:20px;
+}
+
+.profile-header h1{
+
+    font-size:32px;
+
+    letter-spacing:1px;
+}
+
+/* Information */
+
+.profile-info{
+
+    padding:35px;
+}
+
+.info-box{
+
+    margin-bottom:25px;
+
+    border-bottom:1px solid #ececec;
+
+    padding-bottom:15px;
+}
+
+.info-box:last-child{
+
+    border:none;
+}
+
+.info-box label{
+
+    display:block;
+
+    color:#888;
+
+    font-size:14px;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    text-transform:uppercase;
+
+    letter-spacing:.8px;
+}
+
+.info-box p{
+
+    font-size:20px;
+
+    color:#333;
+
+    font-weight:500;
+}
+
+/* Buttons */
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    padding:30px;
+
+    background:#fafafa;
+}
+
+.buttons a{
+
+    text-decoration:none;
+
+    padding:14px 28px;
+
+    border-radius:10px;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.edit-btn{
+
+    background:linear-gradient(135deg,#ff8c42,#ff6b00);
+}
+
+.password-btn{
+
+    background:#34495e;
+}
+
+.buttons a:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 8px 18px rgba(0,0,0,.18);
+}
+
+/* Animation */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.profile-card{
+
+width:100%;
+}
+
+.buttons{
+
+flex-direction:column;
+}
+
+.buttons a{
+
+text-align:center;
+}
+
+.info-box p{
+
+font-size:17px;
+}
+
+.profile-header h1{
+
+font-size:26px;
+}
+
+}

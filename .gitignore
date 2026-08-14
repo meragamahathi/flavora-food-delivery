@@ -1,0 +1,26 @@
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Java build files
+target/
+bin/
+build/
+
+# Tomcat
+Servers/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IntelliJ
+.idea/
+*.iml
+
+# Local database configuration
+src/main/java/com/food/utility/DBConnection.java

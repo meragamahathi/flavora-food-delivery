@@ -1,0 +1,42 @@
+@charset "UTF-8";
+body{
+    font-family:Poppins,sans-serif;
+    background:#f5f5f5;
+}
+
+.container{
+    width:80%;
+    margin:auto;
+    padding:40px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(0,0,0,.1);
+}
+
+.timeline{
+    margin-top:40px;
+}
+
+.step{
+    padding:12px;
+    border-radius:8px;
+    background:#ddd;
+    margin:10px 0;
+    font-weight:bold;
+}
+
+.active{
+    background:#4CAF50;
+    color:white;
+}
+
+.line{
+    width:5px;
+    height:25px;
+    background:#4CAF50;
+    margin-left:20px;
+}

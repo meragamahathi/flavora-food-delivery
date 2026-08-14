@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Food Delivery | Sign Up</title>
+
+<link rel="stylesheet" href="css/signup.css">
+
+</head>
+
+<body>
+
+<div class="bg-image"></div>
+<div class="bg-overlay"></div>
+
+<div class="container">
+
+    <div class="signup-box">
+
+        <div class="header">
+
+            <h1>Sign up</h1>
+
+        </div>
+
+        <form action="SignupServlet" method="POST">
+
+            <input
+            type="text"
+            name="fullName"
+            placeholder="Full Name"
+            required>
+
+            <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required>
+
+             <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required>
+
+            <select name="role">
+               <option value="customer">Customer</option>
+               <option value="deliveryAgent">DeliveryAgent</option>
+               <option value="superAdmin">superAdmin</option>
+            </select>
+
+             <input
+            type="text"
+            name="address"
+            placeholder="Address"
+            required>
+
+            <button type="submit" class="signup-btn">
+
+                Create Account
+
+            </button>
+
+        </form>
+
+        <div class="login">
+
+            Already have an account?
+
+            <a href="login.html">Log in</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
